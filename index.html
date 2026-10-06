@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>🛒 Smart Cart</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#customer">Customer</a>
+            <a href="#cart">
+                Cart 🛒 <span id="cartCount">0</span>
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <h2>Smart Shopping Made Easy</h2>
+
+        <p>
+            Find products, locate shelves and manage your shopping cart easily.
+        </p>
+
+        <button onclick="scrollToProducts()">
+            Start Shopping
+        </button>
+
+    </section>
+
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="products-section">
+
+        <h2>🛍️ Available Products</h2>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="🔍 Search for a product..."
+            onkeyup="searchProducts()"
+        >
+
+        <div class="products">
+
+
+            <!-- SUGAR -->
+            <div class="product">
+
+                <div class="product-icon">🍬</div>
+
+                <h3>Sugar</h3>
+
+                <p class="price">₹45</p>
+
+                <p class="shelf">
+                    📍 Shelf 1
+                </p>
+
+                <button onclick="addToCart('Sugar', 45)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- MILK -->
+            <div class="product">
+
+                <div class="product-icon">🥛</div>
+
+                <h3>Milk</h3>
+
+                <p class="price">₹50</p>
+
+                <p class="shelf">
+                    📍 Shelf 1
+                </p>
+
+                <button onclick="addToCart('Milk', 50)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- COFFEE -->
+            <div class="product">
+
+                <div class="product-icon">☕</div>
+
+                <h3>Coffee</h3>
+
+                <p class="price">₹80</p>
+
+                <p class="shelf">
+                    📍 Shelf 2
+                </p>
+
+                <button onclick="addToCart('Coffee', 80)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- RICE -->
+            <div class="product">
+
+                <div class="product-icon">🍚</div>
+
+                <h3>Rice</h3>
+
+                <p class="price">₹70</p>
+
+                <p class="shelf">
+                    📍 Shelf 2
+                </p>
+
+                <button onclick="addToCart('Rice', 70)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- WHEAT FLOUR -->
+            <div class="product">
+
+                <div class="product-icon">🌾</div>
+
+                <h3>Wheat Flour</h3>
+
+                <p class="price">₹55</p>
+
+                <p class="shelf">
+                    📍 Shelf 3
+                </p>
+
+                <button onclick="addToCart('Wheat Flour', 55)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- COOKING OIL -->
+            <div class="product">
+
+                <div class="product-icon">🫒</div>
+
+                <h3>Cooking Oil</h3>
+
+                <p class="price">₹120</p>
+
+                <p class="shelf">
+                    📍 Shelf 3
+                </p>
+
+                <button onclick="addToCart('Cooking Oil', 120)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- SALT -->
+            <div class="product">
+
+                <div class="product-icon">🧂</div>
+
+                <h3>Salt</h3>
+
+                <p class="price">₹25</p>
+
+                <p class="shelf">
+                    📍 Shelf 4
+                </p>
+
+                <button onclick="addToCart('Salt', 25)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- BISCUITS -->
+            <div class="product">
+
+                <div class="product-icon">🍪</div>
+
+                <h3>Biscuits</h3>
+
+                <p class="price">₹30</p>
+
+                <p class="shelf">
+                    📍 Shelf 4
+                </p>
+
+                <button onclick="addToCart('Biscuits', 30)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- NOODLES -->
+            <div class="product">
+
+                <div class="product-icon">🍝</div>
+
+                <h3>Noodles</h3>
+
+                <p class="price">₹40</p>
+
+                <p class="shelf">
+                    📍 Shelf 5
+                </p>
+
+                <button onclick="addToCart('Noodles', 40)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- CEREAL -->
+            <div class="product">
+
+                <div class="product-icon">🥣</div>
+
+                <h3>Cereal</h3>
+
+                <p class="price">₹150</p>
+
+                <p class="shelf">
+                    📍 Shelf 5
+                </p>
+
+                <button onclick="addToCart('Cereal', 150)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- DAL -->
+            <div class="product">
+
+                <div class="product-icon">🫘</div>
+
+                <h3>Dal</h3>
+
+                <p class="price">₹100</p>
+
+                <p class="shelf">
+                    📍 Shelf 6
+                </p>
+
+                <button onclick="addToCart('Dal', 100)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- SOAP -->
+            <div class="product">
+
+                <div class="product-icon">🧴</div>
+
+                <h3>Soap</h3>
+
+                <p class="price">₹35</p>
+
+                <p class="shelf">
+                    📍 Shelf 7
+                </p>
+
+                <button onclick="addToCart('Soap', 35)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- OUT OF STOCK MESSAGE -->
+        <div id="stockMessage"></div>
+
+    </section>
+
+
+    <!-- CUSTOMER DETAILS -->
+    <section id="customer" class="customer-section">
+
+        <h2>👤 Customer Details</h2>
+
+        <div class="customer-form">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter Customer Name"
+            >
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Enter Phone Number"
+            >
+
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="Enter Email"
+            >
+
+            <textarea
+                id="customerAddress"
+                placeholder="Enter Address"
+                rows="4"
+            ></textarea>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART -->
+    <section id="cart" class="cart-section">
+
+        <h2>🛒 My Cart</h2>
+
+        <div id="cartItems">
+
+            <p>Your cart is empty.</p>
+
+        </div>
+
+
+        <div class="total-box">
+
+            Total: ₹<span id="total">0</span>
+
+        </div>
+
+
+        <button
+            class="checkout-btn"
+            onclick="checkout()"
+        >
+            Checkout
+        </button>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Smart Cart Project
+        </p>
+
+        <p>
+            DHIVYADHARSHINI N & NESAPPRIYA R
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
